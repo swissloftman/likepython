@@ -55,3 +55,4 @@ if __name__ == '__main__':
         forward(int(delay) / 1000.0, int(steps))
         steps = raw_input("Wie viele Schritte rueckwaerts? ")
         backwards(int(delay) / 1000.0, int(steps))
+        setStep(0,0,0,0)
