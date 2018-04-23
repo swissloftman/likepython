@@ -3,24 +3,24 @@ import time
 
 GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
-coil_A_1_pin = 4 # pink
-coil_A_2_pin = 17 # orange
-coil_B_1_pin = 23 # blau
-coil_B_2_pin = 24 # gelb
+coil_A_1_pin = 4 # blau
+coil_A_2_pin = 17 # pink
+coil_B_1_pin = 23 # geld
+coil_B_2_pin = 24 # orang
 #enable_pin   = 7 # Nur bei bestimmten Motoren benoetigt (+Zeile 24 und 30)
 
 # anpassen, falls andere Sequenz
 StepCount = 8
 Seq = list(range(0, StepCount))
-Seq[0] = [0,1,0,0]
+Seq[0] = [0,0,0,1]
 #Seq[0] = [1,1,0,1]
-Seq[1] = [0,1,0,1]
-Seq[2] = [0,0,0,1]
-Seq[3] = [1,0,0,1]
-Seq[4] = [1,0,0,0]
-Seq[5] = [1,0,1,0]
-Seq[6] = [0,0,1,0]
-Seq[7] = [0,1,1,0]
+Seq[1] = [0,0,1,1]
+Seq[2] = [0,0,1,0]
+Seq[3] = [0,1,1,0]
+Seq[4] = [0,1,0,0]
+Seq[5] = [1,1,0,0]
+Seq[6] = [1,0,0,0]
+Seq[7] = [1,0,0,1]
 
 #GPIO.setup(enable_pin, GPIO.OUT)
 GPIO.setup(coil_A_1_pin, GPIO.OUT)
