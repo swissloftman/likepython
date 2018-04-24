@@ -5,15 +5,14 @@ GPIO.setmode(GPIO.BCM)
 GPIO.setwarnings(False)
 coil_A_1_pin = 4 # blau
 coil_A_2_pin = 17 # pink
-coil_B_1_pin = 23 # geld
-coil_B_2_pin = 24 # orang
+coil_B_1_pin = 23 # gelb
+coil_B_2_pin = 24 # orange
 #enable_pin   = 7 # Nur bei bestimmten Motoren benoetigt (+Zeile 24 und 30)
 
 # anpassen, falls andere Sequenz
 StepCount = 8
 Seq = list(range(0, StepCount))
 Seq[0] = [0,0,0,1]
-#Seq[0] = [1,1,0,1]
 Seq[1] = [0,0,1,1]
 Seq[2] = [0,0,1,0]
 Seq[3] = [0,1,1,0]
@@ -53,6 +52,7 @@ if __name__ == '__main__':
         delay = raw_input("Zeitverzoegerung (ms)?")
         steps = raw_input("Wie viele Schritte vorwaerts? ")
         forward(int(delay) / 1000.0, int(steps))
+        setStep(0,0,0,0)
         steps = raw_input("Wie viele Schritte rueckwaerts? ")
         backwards(int(delay) / 1000.0, int(steps))
         setStep(0,0,0,0)
