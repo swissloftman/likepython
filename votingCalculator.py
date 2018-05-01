@@ -1,27 +1,31 @@
 class VotingCalculator:
 
-    maxMotoSteps = 512/2 # Eine Umdrehung ca. 512 Steps. Da ich nur up and down brauche die hälfts
-
-    currentMotoPositionInPercent = 0
-
+    maxMotoSteps = 512/2
+    currentMotoPositionInPercent = 50
     currentLikeVote = 0
-
     currentDisLikeVote = 0
 
+    def __init__(self):
+        self.maxMotoSteps = 512 / 2
+        self.currentMotoPositionInPercent = 50
+        self.currentLikeVote = 0
+        self.currentDisLikeVote = 0
 
-    def getMotoSteps(vote):
+    def getMotoSteps(self, vote):
         if vote == "like":
-            VotingCalculator.currentLikeVote = VotingCalculator.currentLikeVote + 1
+            self.currentLikeVote = self.currentLikeVote + 1
         else:
-            VotingCalculator.currentDisLikeVote = VotingCalculator.currentDisLikeVote + 1
-        percent = VotingCalculator.currentLikeVote/(VotingCalculator.currentLikeVote+VotingCalculator.currentDisLikeVote)
-        diff = VotingCalculator.currentMotoPositionInPercent - percent
-        return VotingCalculator.calculateMotoSteps(diff)
+            self.currentDisLikeVote = self.currentDisLikeVote + 1
+        likePercent = self.currentLikeVote/(self.currentLikeVote+self.currentDisLikeVote)
+        print("Like in Percent "+str(likePercent)+"%")
+        diff = self.currentMotoPositionInPercent - likePercent
+        print("Difference last Vote : "+str(diff)+"%")
+        return self.calculateMotoSteps(diff)
 
-    def calculateMotoSteps(gap):
+    def calculateMotoSteps(self, gap):
         if(gap < 0):
             gap = gap*-1
             direction = "NCW"
         else:
             direction = "CW"
-        return (VotingCalculator.maxMotoSteps/100*gap)+direction
+        return str((VotingCalculator.maxMotoSteps/100*gap))+direction
