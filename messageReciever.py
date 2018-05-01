@@ -1,5 +1,6 @@
 #import stepmotor as motor
 import paho.mqtt.client as mqtt
+import votingCalculator as calculator
 
 # The callback for when the client receives a CONNACK response from the server.
 def on_connect(client, userdata, flags, rc):
