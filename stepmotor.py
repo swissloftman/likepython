@@ -47,6 +47,7 @@ def backwards(delay, steps):
             setStep(Seq[j][0], Seq[j][1], Seq[j][2], Seq[j][3])
             time.sleep(delay)
 
+#for test only
 if __name__ == '__main__':
     while True:
         delay = raw_input("Zeitverzoegerung (ms)?")

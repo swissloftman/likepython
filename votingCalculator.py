@@ -16,9 +16,10 @@ class VotingCalculator:
             self.currentLikeVote = self.currentLikeVote + 1
         else:
             self.currentDisLikeVote = self.currentDisLikeVote + 1
-        likePercent = self.currentLikeVote/(self.currentLikeVote+self.currentDisLikeVote)
+        likePercent = self.currentLikeVote*100/(self.currentLikeVote+self.currentDisLikeVote)
         print("Like in Percent "+str(likePercent)+"%")
         diff = self.currentMotoPositionInPercent - likePercent
+        self.currentMotoPositionInPercent = likePercent
         print("Difference last Vote : "+str(diff)+"%")
         return self.calculateMotoSteps(diff)
 
