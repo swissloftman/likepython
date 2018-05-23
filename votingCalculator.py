@@ -16,7 +16,7 @@ class VotingCalculator:
             self.currentLikeVote = self.currentLikeVote + 1
         else:
             self.currentDisLikeVote = self.currentDisLikeVote + 1
-        likePercent = self.currentLikeVote*100/(self.currentLikeVote+self.currentDisLikeVote)
+        likePercent = self.currentLikeVote*100.0/(self.currentLikeVote+self.currentDisLikeVote)
         print("Like in Percent "+str(likePercent)+"%")
         diff = self.currentMotoPositionInPercent - likePercent
         self.currentMotoPositionInPercent = likePercent
@@ -29,4 +29,4 @@ class VotingCalculator:
             direction = "NCW"
         else:
             direction = "CW"
-        return str((VotingCalculator.maxMotoSteps/100*gap))+direction
+        return str(round((VotingCalculator.maxMotoSteps/100.0*gap),1))+direction
