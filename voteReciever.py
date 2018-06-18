@@ -15,7 +15,7 @@ def on_connect(client, userdata, flags, rc):
 def on_message(client, userdata, msg):
 
     motostep = calc.getMotoSteps(msg.payload)
-    print(msg.topic+" "+str(motostep))
+    print(msg.topic+" "+str(motostep) + msg.payload)
 
 client = mqtt.Client()
 client.on_connect = on_connect
