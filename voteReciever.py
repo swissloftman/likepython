@@ -13,9 +13,10 @@ def on_connect(client, userdata, flags, rc):
 
 # The callback for when a PUBLISH message is received from the server.
 def on_message(client, userdata, msg):
-
+    print("-------------------------------------------")
     motostep = calc.getMotoSteps(msg.payload)
-    print(msg.topic+" "+str(motostep) + msg.payload)
+    print(msg.topic+" "+str(motostep) + " "+ msg.payload)
+    print("-------------------------------------------")
 
 client = mqtt.Client()
 client.on_connect = on_connect
