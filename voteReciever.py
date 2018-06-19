@@ -1,4 +1,4 @@
-#import stepmotor as motor
+import stepmotor as motor
 import paho.mqtt.client as mqtt
 from votingCalculator import VotingCalculator
 
@@ -17,10 +17,10 @@ def on_message(client, userdata, msg):
     print("-------------------------------------------")
     motostep = calc.getMotoSteps(msg.payload)
     if "NCW" in motostep:
-        #motor.backwards(motostep.replace("NCW", ""))
+        motor.backwards(motostep.replace("NCW", ""))
         print("Backward Steps: "+str(motostep.replace("NCW", "")))
     elif "CW" in motostep:
-        #motor.forward(motostep.replace("CW",""))
+        motor.forward(motostep.replace("CW",""))
         print("Forward Steps: "+str(motostep.replace("CW", "")))
     print(msg.topic+" "+str(motostep) + " "+ msg.payload)
     print("-------------------------------------------")
