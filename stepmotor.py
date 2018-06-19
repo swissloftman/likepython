@@ -39,7 +39,6 @@ def forward(delay, steps):
     print("forward")
     for i in range(steps):
         for j in range(StepCount):
-            #print(i * j)
             setStep(Seq[j][0], Seq[j][1], Seq[j][2], Seq[j][3])
             time.sleep(delay)
     setStep(0, 0, 0, 0)
@@ -48,7 +47,6 @@ def backwards(delay, steps):
     print("backward")
     for i in range(steps):
         for j in reversed(range(StepCount)):
-            #print(i * j)
             setStep(Seq[j][0], Seq[j][1], Seq[j][2], Seq[j][3])
             time.sleep(delay)
     setStep(0, 0, 0, 0)
