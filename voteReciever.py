@@ -17,10 +17,10 @@ def on_message(client, userdata, msg):
     print("-------------------------------------------")
     motostep = calc.getMotoSteps(msg.payload)
     if "NCW" in motostep:
-        motor.backwards(delay, int(motostep.replace("NCW", "")))
+        motor.backwards(delay, int(float(motostep.replace("NCW", ""))))
         print("Backward Steps: "+str(motostep.replace("NCW", "")))
     elif "CW" in motostep:
-        motor.forward(delay, int(motostep.replace("CW","")))
+        motor.forward(delay, int(float(motostep.replace("CW",""))))
         print("Forward Steps: "+str(motostep.replace("CW", "")))
     print(msg.topic+" "+str(motostep) + " "+ msg.payload)
     print("-------------------------------------------")
