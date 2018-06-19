@@ -1,4 +1,5 @@
-= Raspberry Pi Python Code für MQTT Reciever und Motor Steurung
+= Raspberry Pi Python Code für MQTT Reciever und Motor Steuerung
+
 Aus langeweile hab ich ein Backend gebaut für Raspberry Pi. Das Backend empfängt MQTT Messages und setzt diese dann in eine Bewegung um.
 Idee war es ein physischen Like zu bauen. Durch aufsetzen eines Bildes der Like Hand wird durch drehung angezeigt wie beliebt man ist.
 
