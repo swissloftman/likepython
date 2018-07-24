@@ -6,7 +6,10 @@ Idee war es ein physischen Like zu bauen. Durch aufsetzen eines Bildes der Like 
 Zur Zeit wird dieses Feature nur mit Telegram Bot angeboten oder eine Website
 
 == Zusatzprojekte
+===== Chatbot für Kotlin
+Kotlin Projekt mit einem Telegram ChatBot. Dieser versendet MQTT Messages an iot.eclipse.org Server
 
+https://github.com/swissloftman/likeChatBotkotline
 
 == Installation auf dem Raspberry pi
 1. sudo apt-get install python
