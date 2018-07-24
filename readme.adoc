@@ -15,3 +15,6 @@ https://github.com/swissloftman/likeChatBotkotline
 1. sudo apt-get install python
 2. sudo apt-get install python-pip
 3. sudo pip install paho-mqtt
+
+== Start
+python voteReciever.py
