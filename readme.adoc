@@ -12,9 +12,9 @@ Kotlin Projekt mit einem Telegram ChatBot. Dieser versendet MQTT Messages an iot
 https://github.com/swissloftman/likeChatBotkotline
 
 == Installation auf dem Raspberry pi
-1. sudo apt-get install python
-2. sudo apt-get install python-pip
-3. sudo pip install paho-mqtt
+1. sudo apt-get install *python*
+2. sudo apt-get install *python-pip*
+3. sudo pip install *paho-mqtt*
 
 == Start
 python voteReciever.py
